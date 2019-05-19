@@ -31,6 +31,19 @@ export class AppComponent {
         },
         zones: this.generateZones(i)
       });
+	  //////////////////////
+	  this.draggableObjects[i].push({
+        data: {
+			payloadType: 'url',
+          id: i+100,
+          payload: 'FxM XXXXXXXXXXXX',
+          name: 'Draggable Video - ' + i+100,
+          currentColumn: i,
+        },
+        zones: this.generateZones(i)
+      });
+	  
+	  //////////////////////
     }
   }
 

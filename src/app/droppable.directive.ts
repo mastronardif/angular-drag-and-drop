@@ -141,6 +141,7 @@ export class DroppableDirective implements OnInit, OnDestroy {
   // 10
   private handleDrop(event: DragEvent): void {
     // Remove styling
+	console.log(`handleDrop: ${event}`);
     this.dragService.removeHighLightedAvailableZones();
     this.renderer.removeClass(event.target, 'js-app-droppable--zone');
     // Emit successful event
