@@ -13,7 +13,7 @@
 
          <div *ngIf="j===1"  [appDraggable]="myDragableObjects[0]" style="background-color:salmon">
            Salmon{{j}}
-           <textarea>fu{{j}}</textarea>
+           <textarea>{{myDragableObjects[0].payload}}</textarea>
 
          </div>
        </ng-container>

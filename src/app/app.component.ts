@@ -11,7 +11,11 @@ export class AppComponent {
   private zonePrefix = 'zone-';
   public droppableObjects: Array<any> = [];
   public draggableObjects: Array<Array<any>> = [[], [], []];
-  public myDragableObjects: Array<DragData> []= [];
+  // public myDragableObjects: Array<DragData> []= [];
+  public myDragableObjects: DragData[] = [];
+
+  public myDragableObjects22: {data: DragData}[] = [];
+
 
   constructor() {
     // NOTE: This is just for the demo - But it gives you an idea of how to set a drag/drop implementation
@@ -48,11 +52,24 @@ export class AppComponent {
     //////////////////////
     //
     this.myDragableObjects.push({
-    id: i,
-    payload: 'wtf',
-    name: 'My Draggable zzz - ' + i + 200,
-    currentColumn: i
+        id: i + 200,
+        payload: `soon to be pasted anything ${i}`,
+        name: 'My Draggable - ' + i + 200,
+        currentColumn: i,
+        payloadType: 'Free Wille'
     });
+
+    this.myDragableObjects22.push({
+      data: {
+        id: i + 200,
+        payload: `soon to be pasted anything ${i}`,
+        name: 'My Draggable - ' + i + 200,
+        currentColumn: i,
+        payloadType: 'Free Wille'
+      }
+    });
+
+
   }
   }
   /**

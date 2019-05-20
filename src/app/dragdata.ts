@@ -1,6 +1,7 @@
 export class DragData {
     id: number;
-    payload: String;
+    payload: string;
     name: string;
     currentColumn: number;
+    payloadType: string;
 };
