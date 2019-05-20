@@ -67,7 +67,7 @@ export class DraggableDirective implements OnInit, OnDestroy {
         
 
         // Transfer the data using Drag and Drop API (Browser)
-		if (this.options.data.payloadType === 'url') {
+		if (this.options.data.payloadType && this.options.data.payloadType === 'url') {
 			event.dataTransfer.setData("text/html", 
 			`
 <figure class="image">

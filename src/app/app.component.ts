@@ -12,9 +12,9 @@ export class AppComponent {
   public droppableObjects: Array<any> = [];
   public draggableObjects: Array<Array<any>> = [[], [], []];
   // public myDragableObjects: Array<DragData> []= [];
-  public myDragableObjects: DragData[] = [];
-
+  //public myDragableObjects: DragData[] = [];
   public myDragableObjects22: {data: DragData}[] = [];
+  public mydata = 'sssssssssssss';
 
 
   constructor() {
@@ -51,13 +51,13 @@ export class AppComponent {
 
     //////////////////////
     //
-    this.myDragableObjects.push({
-        id: i + 200,
-        payload: `soon to be pasted anything ${i}`,
-        name: 'My Draggable - ' + i + 200,
-        currentColumn: i,
-        payloadType: 'Free Wille'
-    });
+    // this.myDragableObjects.push({
+    //     id: i + 200,
+    //     payload: `soon to be pasted anything ${i}`,
+    //     name: 'My Draggable - ' + i + 200,
+    //     currentColumn: i,
+    //     payloadType: 'Free Wille'
+    // });
 
     this.myDragableObjects22.push({
       data: {
