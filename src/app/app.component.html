@@ -10,8 +10,16 @@
          <div [appDraggable]="draggableElement">
             {{draggableElement.data.name}}
          </div>
+
+         <div *ngIf="j===1"  [appDraggable]="myDragableObjects[0]" style="background-color:salmon">
+           Salmon{{j}}
+           <textarea>fu{{j}}</textarea>
+
+         </div>
        </ng-container>
     </div>
   </ng-container>
+  
+  
 </div>
 

@@ -55,7 +55,13 @@ export class DraggableDirective implements OnInit, OnDestroy {
       this.elementRef.nativeElement
       , 'dragstart'
       , (event: DragEvent): void => {
-        this.dragService.startDrag(this.options.zones);
+        // Fm begin
+        console.log(`startDrag:  this(${this})` );
+        console.log(this);
+        // Fm end
+
+        this.dragService.startDrag(this.options.zones);        
+
         // Transfer the data using Drag and Drop API (Browser)
 		if (this.options.data.payloadType === 'url') {
 			event.dataTransfer.setData("text/html", 

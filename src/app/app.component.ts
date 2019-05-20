@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { DragData } from './dragdata';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ export class AppComponent {
   private zonePrefix = 'zone-';
   public droppableObjects: Array<any> = [];
   public draggableObjects: Array<Array<any>> = [[], [], []];
+  public myDragableObjects: Array<DragData> []= [];
 
   constructor() {
     // NOTE: This is just for the demo - But it gives you an idea of how to set a drag/drop implementation
@@ -37,16 +39,22 @@ export class AppComponent {
 			payloadType: 'url',
           id: i+100,
           payload: 'FxM XXXXXXXXXXXX',
-          name: 'Draggable Video - ' + i+100,
+          name: 'Draggable Video - ' + i + 100,
           currentColumn: i,
         },
         zones: this.generateZones(i)
       });
-	  
-	  //////////////////////
-    }
-  }
 
+    //////////////////////
+    //
+    this.myDragableObjects.push({
+    id: i,
+    payload: 'wtf',
+    name: 'My Draggable zzz - ' + i + 200,
+    currentColumn: i
+    });
+  }
+  }
   /**
    * @desc responsible for generating the zones that a draggable element can go too.
    * @param {number} zone - the zone that the draggable element is a part of
