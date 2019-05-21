@@ -1,1 +1,22 @@
 Soon to add video drag drop.
+
+an outline
+The Plan<br/>
+Becoming   
+<figure class="image">
+    <img src="https://i.ytimg.com/vi/KlUX6KGZyhY/default.jpg" alt="the title" width="80px" height="40px">
+</figure>
+
+<a href="https://www.youtube.com/watch?v=KlUX6KGZyhY">The planning </a>
+
+<figure class="image" style="width:80px; height:80px">
+    <img src="https://i.ytimg.com/vi/SBw_M5Xcek0/default.jpg"" alt="the title" width="80px" height="40px">
+</figure>
+
+ <a href="https://www.youtube.com/watch?v=SBw_M5Xcek0">The thinking </a>
+
+<figure class="image" style="width:80px; height:80px">
+    <img src="https://i.ytimg.com/vi/47V_JpTAdwM/default.jpg" alt="the title" width="80px" height="40px">
+</figure>
+
+ <a href="https://www.youtube.com/watch?v=47V_JpTAdwM">Coach potatoe </a>
