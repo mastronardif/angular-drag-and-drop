@@ -1,12 +1,18 @@
-import {Component} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
+//import { FormsModule } from '@angular/forms';
 import { DragData } from './dragdata';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
+  @Input() name = 'dddddd';
+  //@Output() countChange = EventEmitter<number>();
+
   private draggableElements = 3;
   private zonePrefix = 'zone-';
   public droppableObjects: Array<any> = [];
@@ -14,7 +20,8 @@ export class AppComponent {
   // public myDragableObjects: Array<DragData> []= [];
   //public myDragableObjects: DragData[] = [];
   public myDragableObjects22: {data: DragData}[] = [];
-  public mydata = 'sssssssssssss';
+  public mydata = 'BBBBBB';
+  public username  = 'asdf';
 
 
   constructor() {
