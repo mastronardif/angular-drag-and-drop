@@ -69,14 +69,18 @@ export class AppComponent {
     this.myDragableObjects22.push({
       data: {
         id: i + 200,
-        payload: `soon to be pasted anything ${i}`,
+        payload: `<figure class="image">
+        <img src="https://i.ytimg.com/vi/bjJSA8hx35E/hqdefault.jpg" alt="">
+        </figure>
+        
+        <p>
+        <a href="https://www.youtube.com/watch?v=bjJSA8hx35E">play</a></p>
+         ${i}`,
         name: 'My Draggable - ' + i + 200,
         currentColumn: i,
         payloadType: 'Free Wille'
       }
     });
-
-
   }
   }
   /**

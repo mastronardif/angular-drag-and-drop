@@ -67,17 +67,21 @@ export class DraggableDirective implements OnInit, OnDestroy {
         
 
         // Transfer the data using Drag and Drop API (Browser)
-		if (this.options.data.payloadType && this.options.data.payloadType === 'url') {
-			event.dataTransfer.setData("text/html", 
-			`
-<figure class="image">
-<img src="https://i.ytimg.com/vi/bjJSA8hx35E/hqdefault.jpg" alt="">
-</figure>
+		//if (this.options.data.payloadType && (this.options.data.payloadType === 'url') {
+      if (this.options.data.payloadType && ["url", "Free Wille"].includes(this.options.data.payloadType) ) {
+      
+        console.log(JSON.stringify(this.options.data));
 
-<p>
-<a href="https://www.youtube.com/watch?v=bjJSA8hx35E">play</a></p>
+        // event.dataTransfer.setData("text/html", 
+        //   `
+        //   <figure class="image">
+        //   <img src="https://i.ytimg.com/vi/bjJSA8hx35E/hqdefault.jpg" alt="">
+        //   </figure>
+        //   <p> <a href="https://www.youtube.com/watch?v=bjJSA8hx35E">play</a></p>
+        //   `);
 
-			`);
+        event.dataTransfer.setData("text/html", this.options.data.payload);
+
 			//event.dataTransfer.setData("text/uri-list", "http://www.mozilla.org");
 			//event.dataTransfer.setData('text/plain', 'http://www.mozilla.org');
 		} else {			

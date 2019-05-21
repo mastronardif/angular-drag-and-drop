@@ -16,8 +16,10 @@
          <div *ngIf="j===1"  [appDraggable]="myDragableObjects22[0]" style="background-color:salmon">
            Salmon{{j}}
            
-           <textarea [(ngModel)] = "mydata"></textarea>
+           <textarea [(ngModel)] = "myDragableObjects22[0].data.payload"></textarea>
 <h1>H{{mydata}}X</h1>
+
+<pre>{{myDragableObjects22[0] | json}}</pre>
          </div>
        </ng-container>
     </div>
